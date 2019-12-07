@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -7,39 +8,116 @@
         li {
             list-style-type: none;
         }
+
         label {
             width: 120px;
             display: inline-block;
         }
+
         div {
             margin-left: 35px;
         }
     </style>
 </head>
+
 <body>
     <!-- form 태그 필요 속성 3가지 추가. -->
     <form action="" method="" enctype="">
 
         <!-- 로그인 -->
         <fieldset>
+            <legend>로그인</legend>
+
+            <div> <label for="1"> 아이디:</label> <input type="text" name="" id="1">
+            </div>
+
+
+            <div> <label for="2">패스워드:</label>
+                <input type="password" name="" id="2">
+            </div>
+
+
         </fieldset>
 
         <!-- 회원가입 -->
         <fieldset>
-        </fieldset>
+            <legend>회원 가입</legend>
 
+
+            <div>
+                <label for="아이디"> 아이디:</label> <input type="text" name="" id="아이디" required>
+            </div>
+            <div>
+                <label for="패스워드"> 패스워드:</label> <input type="password" name="" id="패스워드" required>
+            </div>
+            <div>
+                <label for="패스워드 확인"> 패스워드 확인:</label> <input type="password" name="" id="패스워드 확인">
+            </div>
+            <div>
+                <label for="이름"> 이름:</label> <input type="text" name="" id="이름" placeholder="이름을 입력하세요">
+            </div>
+
+            <div>
+                <label for="이메일"> 이메일:</label> <input type="email" name="" id="이메일">
+            </div>
+            <div>
+                <label for="전화번호"> 전화번호:</label> <input type="number" name="" id="전화번호">
+            </div>
+            <div>
+                <label for="3"> 생년월일: </label> <input type="date" name="" id="3">
+            </div>
+
+
+        </fieldset>
         <!-- 수강신청 -->
+
         <fieldset>
+            <legend>수강 신청</legend>
+
+            <div>
+                <lable>언어 초급:</lable> <input type="radio" name="10" id="">
+            </div>
+            <div>
+                <lable>영어 중급:</lable> <input type="radio" name="10" id="">
+            </div>
+            <div>
+                <lable>영어 고급:</lable> <input type="radio" name="10" id="">
+            </div>
+
+            <div>
+                영어 초급: <input type="checkbox" name="" id="">
+            </div>
+            <div>
+                영어 중급: <input type="checkbox" name="" id="">
+            </div>
+            <div>
+                영어 고급: <input type="checkbox" name="" id="">
+            </div>
+
+
+
         </fieldset>
 
         <!-- selec박스 -->
+
         <fieldset>
+            <select name="" id="">
+                <option value="">건축과</option>
+                <option value="">토목과</option>
+                <option value="" selected>수학과</option>
+                <option value="">생물학과</option>
+            </select>
         </fieldset>
 
         <!-- 전송 버튼 : form 을 완료 -->
+        <input type="submit" value="전송">
         <!-- 초기화 버튼 :  form 입력 값을 초기화  -->
+        <input type="submit" value="초기화">
+
+
 
     </form>
 
 </body>
+
 </html>
