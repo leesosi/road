@@ -1,25 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
+    <style>
+        /* <li id="none">1</li> */
+        li#none {
+            list-style-type: none;
+        }
+
+        /* <li id="disc">2</li>*/
+        li#disc {
+            list-style-type: disc;
+        }
+
+        /* <li id="circle">3</li>*/
+        li#circle {
+            list-style-type: circle;
+        }
+
+        /* <li id="square">4</li>*/
+        li#square {
+            list-style-type: square;
+
+        }
+
+        /* <li id="image">5</li>*/
+        li#image {
+            list-style-image: url(../images/1.jpg)
+        }
+
+        /* <li id="inside">6</li>*/
+        li#inside {
+            list-style: inside;
+
+        }
+
+        /* <li id="outside">7</li>*/
+        li#outside {
+            list-style: outside;
+
+        }
+
+
+        li#liststyle {
+            list-style-type: circle;
+            list-style-image: url(../images/dot.png);
+            list-style-position: inside;
+            list-style: circle url(../images/dot.png) inside
+        }
+
+
+
+    </style>
+
+
+
 </head>
-<body>    
+
+<body>
     <ul>
         <li>0</li>
-
         <li id="none">1</li>
         <li id="disc">2</li>
         <li id="circle">3</li>
         <li id="square">4</li>
-
         <li id="image">5</li>
-
         <li id="inside">6</li>
         <li id="outside">7</li>
         <li>8</li>
     </ul>
+
+    <h2> list-style 속성실습 </h2>
+    <pre>
+    한번에 세가지 설정하기 
+    type: circle;
+    image:../images/dot.png
+    position: inside
+    </pre>
+
+    <ul>
+        <li> 설정전</li>
+        <li id="liststyle"> 설정 후 </li>
+    </ul>
+
+
+
 </body>
+
 </html>

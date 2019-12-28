@@ -1,9 +1,27 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="utf-8">
     <title>텍스트 속성</title>
+
+    <style>
+        /*<p class = "color_hexa">*/
+        p.color_hexa {
+            color: #09fa04;
+        }
+
+        p.align_center {
+            text-align: center;
+        }
+
+        p.decoration1 {
+            text-decoration: none;
+        }
+    </style>
 </head>
+
+
 <body>
     <pre>
 텍스트 색상 지정 
@@ -12,9 +30,9 @@ text-decoration 속성
     </pre>
     <h2> 텍스트 색상 지정 </h2>
     <div>
-        <p class = "color_hexa"> #09fa04 </p>
-        <p class = "color_rgba"> rgba( 233, 255, 12, 0.5) </p>
-        <p class = "color_name"> lightblue </p>
+        <p class="color_hexa"> #09fa04 </p>
+        <p class="color_rgba"> rgba( 233, 255, 12, 0.5) </p>
+        <p class="color_name"> lightblue </p>
     </div>
 
     <hr>
@@ -30,11 +48,17 @@ text-decoration 속성
     <hr>
 
     <h2> 텍스트 밑줄 설정. a 태그 설정시 많이 사용. </h2>
-    <p class = "decoration1"> 텍스트 밑줄 표시하지 않기!!! </p>
-    <p class = "decoration2"> 텍스트 밑줄 표시!!! </p>
-    <p class = "decoration3"> 텍스트 영역 위로 선 표시!!! </p>
-    <p class = "decoration4"> 텍스트 영역을 가로지르는 선 표시!!! </p>
+    <p class="decoration1"> 텍스트 밑줄 표시하지 않기!!! </p>
+    <p class="decoration2"> 텍스트 밑줄 표시!!! </p>
+    <p class="decoration3"> 텍스트 영역 위로 선 표시!!! </p>
+    <p class="decoration4"> 텍스트 영역을 가로지르는 선 표시!!! </p>
+
+
+
+
+    <h2> 텍스트 밑줄 없애기 </h2>
+    <a href="https://www.naver.com"> 밑줄을 없애시오 </a>
 
 </body>
+
 </html>
-
