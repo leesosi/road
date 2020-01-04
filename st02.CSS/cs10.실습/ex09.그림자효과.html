@@ -1,36 +1,107 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>CSS 버튼 만들기</title>
+
+
+
+    <style>
+        /*모서리 둥글게 */
+
+        .wrapper >p {
+            border-width: 20px;
+            border-style: dashed;
+            border-color: aliceblue;
+            
+        }
+
+
+
+        /*배경색 */
+
+        /*위쪽에 그리디언트 만들기 : 투명도90% */
+
+        /*lifted의 모서리값에 광택효과도 모서리를 둥글게 */
+        .lifted {
+            border-radius: 3px
+        }
+
+
+        /*boteon-right, bottom-left에 배경설정  */
+        .lifted:before,
+        .lifted:after {
+            bottom: 15px;
+            left: 10px;
+            width: 50% height: 20%;
+            max-width: 300px;
+            max-heigth: 100px;
+            box-shadow: 0 15px 10px rgb(0, 0, 0, 0.5);
+            transform: rotate(-3deg);
+            /*회전설정*/
+
+            /*위치값과 회전이 필요한 것은 :after이기 때문에 :after에 속성추가 */
+
+            .lifted
+        }
+
+
+
+
+
+    </style>
+
+
+<link rel="stylesheet" href="./cs04-ex09.그림자효과.css">
+
+
 </head>
+
 <body>
     <div class="wrapper">
         <!--이 안에 배너를 만들게 됩니다-->
         <div class="shadow lifted">
-            <a><p>Lifted corners</p></a>
+            <a>
+                <p>Lifted corners</p>
+            </a>
         </div>
         <div class="shadow curled">
-            <a><p>Curled corners</p></a>
+            <a>
+                <p>Curled corners</p>
+            </a>
         </div>
         <div class="shadow Perspective">
-            <a><p>Perspective</p></a>
+            <a>
+                <p>Perspective</p>
+            </a>
         </div>
         <div class="shadow raised">
-            <a><p>Raised box</p></a>
+            <a>
+                <p>Raised box</p>
+            </a>
         </div>
         <div class="shadow curved">
-            <a><p>Single vertical curve</p></a>
+            <a>
+                <p>Single vertical curve</p>
+            </a>
         </div>
         <div class="shadow curved curved-vt-2">
-            <a><p>Vertical curves</p></a>
+            <a>
+                <p>Vertical curves</p>
+            </a>
         </div>
         <div class="shadow curved curved-hz-1">
-            <a><p>Single horizontal curve</p></a>
+            <a>
+                <p>Single horizontal curve</p>
+            </a>
         </div>
         <div class="shadow curved curved-hz-2">
-            <a><p>Horizontal curves</p></a>
+            <a>
+                <p>Horizontal curves</p>
+            </a>
         </div>
     </div>
 </body>
-</html>
+
+</html>

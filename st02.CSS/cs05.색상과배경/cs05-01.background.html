@@ -1,9 +1,187 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="utf-8">
     <title>배경 이미지</title>
+    <style>
+        /*CSS 초기화 : 브라우져 default  css 설정제거*/
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        /*body 태그에 배경이미지를 설정한다. background-image, backgroud-repeat 속성에 대해서 알아본다. */
+        body {
+            background-image: url(./images/bg1.png);
+            background-repeat: no-repeat;
+            /*반복없음*/
+            background-repeat: repeat-x;
+            /*x축으로 반복*/
+            background-repeat: repeat-y;
+            /*y축으로 반복*/
+            background-repeat: repeat;
+            /*x,y축으로 반복, 디폴트값, 생략하면 자동적용*/
+        }
+
+
+        #color {
+            background-color: aqua;
+
+        }
+
+        #color>div {
+            background-color: white;
+            border: 1px dashed black;
+            margin: 50px 50px 0 0;
+        }
+
+
+        #clip>div {
+            border: 10px black dotted;
+            padding: 20px;
+            margin: 20px;
+            background-color: aqua;
+            width: calc(100%/3- 10px*6 - 20px*2 -20px*2);
+            float: left;
+            background-clip: border-box;
+
+
+
+        }
+
+        #clip::after {
+            clear: both;
+            display: block;
+            content: '';
+        }
+
+        /*배경색 위치 설정: 보더안으로만, 패딩안으로만, 컨탠츠만 */
+
+
+        #clip>div.bg1 {
+            background-clip: border-box;
+        }
+
+        #clip>div.bg2 {
+            background-clip: padding-box;
+        }
+
+        #clip>div.bg3 {
+            background-clip: content-box;
+        }
+
+
+
+        #origin>div {
+            border: 15px solid lightgray;
+            padding: 35px;
+            margin: 30px;
+            box-sizing: border-box;
+            background-color: white;
+            width: 300px;
+            height: 700px;
+            float: left;
+            background-image: url(./images/bg5.png);
+            background-repeat: no-repeat;
+
+        }
+
+
+        #origin>div.bg1 {
+            background-clip: padding-box;
+            /*디폴트*/
+        }
+
+        #origin>div.bg2 {
+            background-clip: border-box;
+        }
+
+        #origin>div.bg3 {
+            background-clip: content-box;
+        }
+
+        #origin::after {
+            clear: both;
+            display: block;
+            content: '';
+
+        }
+
+
+
+        #position>div {
+            background-image: url(../images/bg2.jpg);
+            background-repeat: no-repeat;
+            width: 700px;
+            height: 150px;
+            padding: 150px 0 20px 0
+        }
+
+        #position>div.bg1 {
+            background-position: left top;
+        }
+
+        #position>div.bg1 {
+            background-position: center center;
+        }
+
+        #position>div.bg1 {
+            background-position: left bottom;
+        }
+
+        #size>div {
+            background-image: url(../images/bg4.jpg);
+            background-repeat: no-repeat;
+            background-position: top left;
+            border: 1px solid #000000;
+            width: 300px;
+            height: 300px;
+            margin: 0px 20px 20px 20px;
+            float: left;
+        }
+
+
+        /*float 해제 size 닫는 태그
+        */
+
+        #size::after {
+            clear: both;
+            display: block;
+            content: '';
+
+        }
+
+        #size>div.bg1 {
+            background-size: auto;
+        }
+
+        #size>div.bg2 {
+            background-size: 200px 150px;
+        }
+
+        #size>div.bg3 {
+            background-size: 60% 40%;
+        }
+
+
+
+        #size>div.bg4 {
+            background-size: contain;
+        }
+
+        #size>div.bg5 {
+            background-size: cover;
+        }
+
+        #size>div.bg6 {
+            background-size: 100% 100%;
+        }
+    </style>
+
+
 </head>
+
 <body>
 
     <div id="color">
@@ -13,10 +191,10 @@
             <p>초콜릿은 카카오 콩을 재료로 가공한 식품이다.
                 숙성한 카카오 콩을 볶은 뒤 이를 갈아서 만든 카카오 매스와 지방 성분만으로 만들어진 코코아 버터를 혼합하여 만드는데,
                 설탕 등의 다른 재료를 더 넣어 만들기도 한다.
-            카카오 매스의 함량에 따라 다크 초콜릿, 밀크 초콜릿, 화이트 초콜릿으로 구분한다.</p>
+                카카오 매스의 함량에 따라 다크 초콜릿, 밀크 초콜릿, 화이트 초콜릿으로 구분한다.</p>
         </div>
     </div>
-        
+
     <div id="clip">
         <h2>background-clip</h2>
         <div class="bg1">
@@ -27,6 +205,8 @@
                 잘 알려져 있듯이 블루베리와 함께 대표적인 항산화 음식이기도 하다.
             </p>
         </div>
+
+
         <div class="bg2">
             <p>
                 <strong>토마토 : </strong>
@@ -45,7 +225,7 @@
                 잘 알려져 있듯이 블루베리와 함께 대표적인 항산화 음식이기도 하다.
             </p>
         </div>
-    </div> <!--  <--- ::after  --> 
+    </div> <!--  <--- ::after  -->
 
     <div id="origin">
         <h2>background-origin</h2>
@@ -85,7 +265,7 @@
                 숙성한 카카오 콩을 볶은 뒤 이를 갈아서 만든 카카오 매스와
                 지방 성분만으로 만들어진 코코아 버터를 혼합하여 만드는데,
                 설탕 등의 다른 재료를 더 넣어 만들기도 한다.
-            카카오 매스의 함량에 따라 다크 초콜릿, 밀크 초콜릿, 화이트 초콜릿으로 구분한다.</p>
+                카카오 매스의 함량에 따라 다크 초콜릿, 밀크 초콜릿, 화이트 초콜릿으로 구분한다.</p>
         </div>
         <div class="bg2">
             <h1>초콜릿(Chocolate)</h1>
@@ -129,4 +309,5 @@
         <div class="bg6">배경 이미지 사이즈 : 100% 100%</div>
     </div>
 </body>
-</html>
+
+</html>
