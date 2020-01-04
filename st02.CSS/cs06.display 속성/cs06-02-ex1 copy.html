@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>display 속성</title>
+
+    <style>
+hr { clear: both;
+}
+
+    ul.parent{ /* float 적용 태그 :ul 태
+
+    }
+
+</style>
+ 
+
+
+
+</head>
+
+<body>
+
+    <pre>
+float 속성이 적용되는 태그를 이해하고자 한다. 
+float 속성은 자기 자신(태그)에게만 적용된다. 
+즉, 자식이나 자손에게는 적용되지 않는다. 
+
+ul. parent에 flaot를 적용 
+
+    </pre>
+    <h2>float 적용하지 않은 경우 </h2>
+
+    <ul class>
+
+        <li> <a href="#"> 메뉴 2-1 </li>
+        <li> <a href="#"> 메뉴 2-2 </li>
+        <li> <a href="#"> 메뉴 2-3 </li>
+    </ul>
+
+
+    <ul class>
+
+        <li> <a href="#"> 메뉴 2-1 </li>
+        <li> <a href="#"> 메뉴 2-2 </li>
+        <li> <a href="#"> 메뉴 2-3 </li>
+    </ul>
+    <h2>부모에 float 적용 </h2>
+
+    <ul classs="parent">
+
+        <li> <a href="#"> 메뉴 2-1 </li>
+        <li> <a href="#"> 메뉴 2-2 </li>
+        <li> <a href="#"> 메뉴 2-3 </li>
+    </ul>
+
+
+    <ul class="parent">
+
+        <li> <a href="#"> 메뉴 2-1 </li>
+        <li> <a href="#"> 메뉴 2-2 </li>
+        <li> <a href="#"> 메뉴 2-3 </li>
+    </ul>
+
+
+    <h2>자식에 float 적용 </h2>
+
+    <ul class="child">
+
+        <li> <a href="#"> 메뉴 2-1 </li>
+        <li> <a href="#"> 메뉴 2-2 </li>
+        <li> <a href="#"> 메뉴 2-3 </li>
+    </ul>
+
+
+
+    <ul class="child">
+
+        <li> <a href="#"> 메뉴 2-1 </li>
+        <li> <a href="#"> 메뉴 2-2 </li>
+        <li> <a href="#"> 메뉴 2-3 </li>
+    </ul>
+
+
+    <h2>float를 사용하여 수평으로 배열 시키시오.</h2>
+    <div id="float">
+        <div class="ex1">첫번째</div>
+        <div class="ex2">두번째</div>
+        <div class="ex3">세번째</div>
+    </div>
+
+    <h2>display:inline-block 를 사용하여 수평으로 배열 시키시오.</h2>
+    <div id="inlineblock">
+        <div class="ex1">첫번째</div>
+        <div class="ex2">두번째</div>
+        <div class="ex3">세번째</div>
+    </div>
+
+    <h2>display:flex 를 사용하여 수평으로 배열 시키시오.</h2>
+    <div id="flex">
+        <div class="ex1">첫번째</div>
+        <div class="ex2">두번째</div>
+        <div class="ex3">세번째</div>
+    </div>
+</body>
+
+</html>
