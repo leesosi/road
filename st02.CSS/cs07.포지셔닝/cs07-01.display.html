@@ -3,6 +3,50 @@
 <head>
     <meta charset="utf-8">
     <title>박스모델</title>
+<style>
+
+div{
+width: 200px; 
+height: 200px;
+float: left;
+
+}
+
+div.box1{ background-color: orange;
+
+
+}
+
+div.box2{background-color: blue;
+
+
+
+}
+
+div.box3{background-color: green;
+
+}
+
+div.box4{ border: 1px solid #000000;
+
+}
+
+div.box5{ border: 1px solid #000000;
+float: right;
+}
+
+body::after{
+    clear:both;
+    display: block;
+    content:'';
+}
+
+</style>
+
+
+
+
+
 </head>
 <body>
     <div class="box1">박스1</div>
@@ -11,4 +55,4 @@
     <div class="box4">박스4</div>
     <div class="box5">박스5</div>
 </body>
-</html>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+
+
+    <style>
+    #float>li {
+        float: left;
+    }
+    #float::after{
+        clear: both;
+        display:block;
+        content:'';
+    }
+    
+    #display>li{
+        display:inline-block;
+    }
+    #dispaly::after{
+        clear: both;
+        display:block;
+        content:'';
+    }
+    </style>
+</head>
+
+<body>
+    <h2>float를 적용한경우</h2>
+    <ul id="float">
+
+        <li><a href="http://">메뉴1</a></li>
+        <li><a href="http://">메뉴2</a></li>
+        <li><a href="http://">메뉴3</a></li>
+
+    </ul>
+
+    <h2>display: inline-block 를 적용한경우</h2>
+
+    <ul id="display">
+
+
+        <li><a href="http://">메뉴1</a></li>
+        <li><a href="http://">메뉴2</a></li>
+        <li><a href="http://">메뉴3</a></li>
+
+    </ul>
+</body>
+
+</html>

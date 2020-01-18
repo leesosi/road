@@ -1,9 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>display 속성</title>
+
+
+    <style>
+        ul>li {
+            border: 0.1px solid #999999;
+            width: 100px;
+            height: 50px;
+            list-style-type: none;
+            display: inline-block;
+            float: left;
+            text-align: center;
+            margin: 0;      
+            line-height: 50px;
+        }
+
+        li:nth-child(even) {
+            background-color: lawngreen;
+        }
+
+        li:nth-child(odd) {
+            background-color: red
+        }
+
+        li:first-child {
+            border-radius: 20px 0 0 20px
+        }
+
+        li:last-child {
+            border-radius: 0px 20px 20px 0px
+        }
+    </style>
+
+
+
+
+
 </head>
+
 <body>
     <ul>
         <li>1번째</li>
@@ -16,4 +54,5 @@
         <li>8번째</li>
     </ul>
 </body>
+
 </html>

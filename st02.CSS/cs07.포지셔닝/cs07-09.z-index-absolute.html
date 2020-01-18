@@ -3,6 +3,37 @@
 <head>
     <meta charset="utf-8">
     <title>z-index 속성</title>
+
+<style>
+div{border: 1px solid black;
+width: 100px;
+height: 100px;
+}
+
+.b1{
+    background-color: aquamarine;
+z-index: 1
+}
+.b2{ 
+    background-color: bisque;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    z-index: 2
+}
+.b3{
+   background-color:burlywood;
+   position:absolute;
+   left: 100px;
+   top:100px;
+   z-index: 3
+}
+
+
+</style>
+
+
+
 </head>
 <body>
     <div id="wrapper">
@@ -11,4 +42,4 @@
         <div class="b3">3</div>
     </div>
 </body>
-</html>
+</html>
